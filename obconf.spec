@@ -17,6 +17,8 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool
 BuildRequires:	openbox-devel >= 1:3.0-0.rc1.1
+BuildRequires:	pkgconfig
+BuildRequires:	startup-notification-devel
 Requires:	openbox
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
