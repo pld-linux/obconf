@@ -1,0 +1,16 @@
+diff -aurN obconf-1.5.orig/obconf.desktop obconf-1.5/obconf.desktop
+--- obconf-1.5.orig/obconf.desktop	2003-09-26 08:33:26.000000000 +0200
++++ obconf-1.5/obconf.desktop	2004-09-17 06:48:49.361638936 +0200
+@@ -1,10 +1,11 @@
+ [Desktop Entry]
+ Name=ObConf
+ Comment=Openbox Preferences Manager
++Comment[pl]=Zarządca ustawień Openboksa
+ Icon=openbox.png
+ Exec=obconf
+ StartupNotify=true
+ Terminal=false
+ Type=Application
+-Categories=Openbox;Application;System Tools
++Categories=GTK;Settings;
+ Encoding=UTF-8
