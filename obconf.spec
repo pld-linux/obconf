@@ -1,6 +1,6 @@
 # TODO:
 # - .desktop
-# - should be accessable from GNOME control center (maybe)
+# - should be accessible from GNOME control center (maybe)
 # - check BR
 #
 Summary:	Tool for configuring the Openbox window manager
@@ -13,6 +13,7 @@ Group:		X11/Applications
 Source0:	http://openbox.org/obconf/%{name}-%{version}.tar.gz
 # Source0-md5:	dd57f5362218de1dcad48014a74982e6
 URL:		http://openbox.org/obconf/
+BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-autopoint >= 0.12.1
@@ -20,8 +21,6 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool
 BuildRequires:	openbox-devel >= 3.0-0.beta5.1
-BuildRequires:	XFree86-devel
-BuildRequires:	xft-devel >= 2.0
 Requires:	openbox
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,7 +29,7 @@ ObConf allows you to configure Openbox in real-time. You can change
 options such as the theme, desktop names, and focus settings.
 
 %description -l pl
-ObConf pozwala na konfiguracjê Openboxa w czasie rzeczywistym. Mo¿na
+ObConf pozwala na konfiguracjê Openboksa w czasie rzeczywistym. Mo¿na
 nim zmieniaæ opcje jak motyw, nazwy pulpitów i ustawienia zachowania
 okien.
 
