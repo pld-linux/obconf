@@ -18,7 +18,7 @@ BuildRequires:	gettext-autopoint >= 0.12.1
 BuildRequires:	gtk+2-devel
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool
-BuildRequires:	openbox-devel >= 3.0-1.rc1.0
+BuildRequires:	openbox-devel >= 1:3.0-0.rc1.1
 Requires:	openbox
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
