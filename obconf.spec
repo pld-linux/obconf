@@ -10,11 +10,11 @@ Source0:	http://openbox.org/obconf/%{name}-%{version}.tar.gz
 Patch0:		%{name}-desktop.patch
 URL:		http://openbox.org/obconf/
 BuildRequires:	XFree86-devel
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
 BuildRequires:	gettext-autopoint >= 0.12.1
-BuildRequires:	gtk+2-devel
-BuildRequires:	libglade2-devel
+BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	libtool
 BuildRequires:	openbox-devel >= 1:3.0-0.rc1.1
 BuildRequires:	pkgconfig
