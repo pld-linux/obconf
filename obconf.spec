@@ -1,17 +1,15 @@
 # TODO:
-# - .desktop
-# - should be accessible from GNOME control center (maybe)
 # - check BR
 #
 Summary:	Tool for configuring the Openbox window manager
 Summary(pl):	Narzêdzie do konfiguracji zarz±dcy okien Openbox
 Name:		obconf
-Version:	1.4
+Version:	1.5
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://openbox.org/obconf/%{name}-%{version}.tar.gz
-# Source0-md5:	dd57f5362218de1dcad48014a74982e6
+# Source0-md5:	a0f0e14db3d889bd67f98f1c00b4a9f7
 URL:		http://openbox.org/obconf/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -20,7 +18,7 @@ BuildRequires:	gettext-autopoint >= 0.12.1
 BuildRequires:	gtk+2-devel
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool
-BuildRequires:	openbox-devel >= 3.0-0.beta5.1
+BuildRequires:	openbox-devel >= 3.0-1.rc1.0
 Requires:	openbox
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -61,3 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/obconf.glade
+%{_desktopdir}/obconf.desktop
