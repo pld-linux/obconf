@@ -29,8 +29,8 @@ ObConf allows you to configure Openbox in real-time. You can change
 options such as the theme, desktop names, and focus settings.
 
 %description -l pl
-ObConf pozwala na konfiguracjê Openboxa w czasie rzeczywistym. Mo¿esz
-zmieniaæ opcje jak motyw, nazwy pulpitów i ustawienia zachowania
+ObConf pozwala na konfiguracjê Openboxa w czasie rzeczywistym. Mo¿na
+nim zmieniaæ opcje jak motyw, nazwy pulpitów i ustawienia zachowania
 okien.
 
 %prep
