@@ -2,15 +2,16 @@
 # - .desktop
 # - should be accessable from GNOME control center (maybe)
 # - check BR
+#
 Summary:	Tool for configuring the Openbox window manager
 Summary(pl):	Narzêdzie do konfiguracji zarz±dcy okien Openbox
 Name:		obconf
-Version:	1.1
-Release:	0.1
+Version:	1.3
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://icculus.org/openbox/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	6ac86be513ae9c12b536b9a0de853c43
+# Source0-md5:	847a57ac6f6778b86445e0ead24c9318
 URL:		http://icculus.org/openbox/obconf.php
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -18,7 +19,7 @@ BuildRequires:	gettext-autopoint >= 0.12.1
 BuildRequires:	gtk+2-devel
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool
-BuildRequires:	openbox-devel >= 3.0-0.beta3.1
+BuildRequires:	openbox-devel >= 3.0-0.beta4.1
 BuildRequires:	XFree86-devel
 BuildRequires:	xft-devel >= 2.0
 Requires:	openbox
