@@ -1,15 +1,13 @@
-# TODO:
-# - check BR
-#
 Summary:	Tool for configuring the Openbox window manager
 Summary(pl):	Narzêdzie do konfiguracji zarz±dcy okien Openbox
 Name:		obconf
 Version:	1.5
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://openbox.org/obconf/%{name}-%{version}.tar.gz
 # Source0-md5:	a0f0e14db3d889bd67f98f1c00b4a9f7
+Patch0:		%{name}-desktop.patch
 URL:		http://openbox.org/obconf/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -33,9 +31,9 @@ okien.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-rm -f missing
 %{__autopoint}
 %{__libtoolize}
 %{__aclocal} -I m4
