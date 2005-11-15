@@ -2,7 +2,7 @@ Summary:	Tool for configuring the Openbox window manager
 Summary(pl):	Narzêdzie do konfiguracji zarz±dcy okien Openbox
 Name:		obconf
 Version:	1.5
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://openbox.org/obconf/%{name}-%{version}.tar.gz
