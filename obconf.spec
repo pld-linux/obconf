@@ -1,5 +1,5 @@
 Summary:	Tool for configuring the Openbox window manager
-Summary(pl):	Narzêdzie do konfiguracji zarz±dcy okien Openbox
+Summary(pl.UTF-8):   NarzÄ™dzie do konfiguracji zarzÄ…dcy okien Openbox
 Name:		obconf
 Version:	1.6
 Release:	1
@@ -23,9 +23,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ObConf allows you to configure Openbox in real-time. You can change
 options such as the theme, desktop names, and focus settings.
 
-%description -l pl
-ObConf pozwala na konfiguracjê Openboksa w czasie rzeczywistym. Mo¿na
-nim zmieniaæ opcje jak motyw, nazwy pulpitów i ustawienia zachowania
+%description -l pl.UTF-8
+ObConf pozwala na konfiguracjÄ™ Openboksa w czasie rzeczywistym. MoÅ¼na
+nim zmieniaÄ‡ opcje jak motyw, nazwy pulpitÃ³w i ustawienia zachowania
 okien.
 
 %prep
