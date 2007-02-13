@@ -1,5 +1,5 @@
 Summary:	Tool for configuring the Openbox window manager
-Summary(pl.UTF-8):   Narzędzie do konfiguracji zarządcy okien Openbox
+Summary(pl.UTF-8):	Narzędzie do konfiguracji zarządcy okien Openbox
 Name:		obconf
 Version:	1.6
 Release:	1
