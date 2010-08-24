@@ -3,12 +3,12 @@
 Summary:	Tool for configuring the Openbox window manager
 Summary(pl.UTF-8):	Narzędzie do konfiguracji zarządcy okien Openbox
 Name:		obconf
-Version:	2.0.2
-Release:	5
+Version:	2.0.3
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://icculus.org/openbox/obconf/%{name}-%{version}.tar.gz
-# Source0-md5:	1a47bbb3c2f42f134c25a3ef4727cde9
+# Source0-md5:	b22e273721851dedad72acbc77eefb68
 Patch0:		%{name}-desktop.patch
 URL:		http://openbox.org/obconf/
 BuildRequires:	autoconf >= 2.54
@@ -30,8 +30,8 @@ options such as the theme, desktop names, and focus settings.
 
 %description -l pl.UTF-8
 ObConf pozwala na konfigurację Openboksa w czasie rzeczywistym. Można
-nim zmieniać opcje jak motyw, nazwy pulpitów i ustawienia zachowania
-okien.
+nim zmieniać opcje takie jak motyw, nazwy pulpitów i ustawienia
+zachowania okien.
 
 %prep
 %setup -q
@@ -68,6 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/obconf
 %{_datadir}/%{name}
 %{_desktopdir}/obconf.desktop
+%{_pixmapsdir}/obconf.png
 %{_datadir}/mime/packages/obconf.xml
 
 # FIXME: move these dirs to filesystem package (?)
