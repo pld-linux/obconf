@@ -4,11 +4,12 @@ Summary:	Tool for configuring the Openbox window manager
 Summary(pl.UTF-8):	Narzędzie do konfiguracji zarządcy okien Openbox
 Name:		obconf
 Version:	2.0.3
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://icculus.org/openbox/obconf/%{name}-%{version}.tar.gz
 # Source0-md5:	b22e273721851dedad72acbc77eefb68
+Source1:	%{name}.mo
 Patch0:		%{name}-desktop.patch
 URL:		http://openbox.org/obconf/
 BuildRequires:	autoconf >= 2.54
@@ -47,9 +48,13 @@ zachowania okien.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# install pl locale
+install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
 
 # no -> nb
 mv $RPM_BUILD_ROOT%{_datadir}/locale/{no,nb}
