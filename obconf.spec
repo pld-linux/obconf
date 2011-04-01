@@ -1,10 +1,11 @@
 # TODO:
 # - update to 2.0.3 (temporary broken link)
+# - packaging compiled .mo is not upgradeable, drop it or include .po
 Summary:	Tool for configuring the Openbox window manager
 Summary(pl.UTF-8):	Narzędzie do konfiguracji zarządcy okien Openbox
 Name:		obconf
 Version:	2.0.3
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://icculus.org/openbox/obconf/%{name}-%{version}.tar.gz
@@ -54,12 +55,15 @@ install -d $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
 	DESTDIR=$RPM_BUILD_ROOT
 
 # install pl locale
-install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
+cp -p %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
 
 # no -> nb
 mv $RPM_BUILD_ROOT%{_datadir}/locale/{no,nb}
 
 %find_lang %{name}
+
+# kde3 file association, shared-mime-info should be sufficant nowadays
+%{__rm} $RPM_BUILD_ROOT%{_datadir}/mimelnk/application/x-openbox-theme.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -78,9 +82,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/obconf.desktop
 %{_pixmapsdir}/obconf.png
 %{_datadir}/mime/packages/obconf.xml
-
-# FIXME: move these dirs to filesystem package (?)
-# it's workaround to not require kdelibs
-%dir %{_datadir}/mimelnk
-%dir %{_datadir}/mimelnk/application
-%{_datadir}/mimelnk/application/x-openbox-theme.desktop
