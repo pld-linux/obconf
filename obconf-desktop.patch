@@ -1,19 +1,24 @@
 --- obconf-2.0.3/obconf.desktop~	2008-01-26 07:25:09.000000000 +0100
 +++ obconf-2.0.3/obconf.desktop	2010-08-24 21:42:57.316255136 +0200
-@@ -1,13 +1,14 @@
+@@ -1,18 +1,20 @@
  [Desktop Entry]
 -Encoding=UTF-8
  Type=Application
  Name=Openbox Configuration Manager
+ Name[pt_BR]=Gerenciador de configurações do Openbox
+ Name[ru]=Менеджер настройки Openbox
  Name[zh_TW]=Openbox 組態管理器
 +Name[pl]=Zarządca ustawień Openboksa
- Comment=Openbox configuration manager
+ GenericName=Configuration Manager
+ GenericName[pt_BR]=Gerenciador de configurações
+ GenericName[ru]=Менеджер настройки Openbox
+ GenericName[zh_TW]=Openbox 組態管理器
++GenericName[pl]=Zarządca ustawień Openboksa
+ Comment=Tweak settings for Openbox
+ Comment[pt_BR]=Configure as opções do Openbox
+ Comment[ru]=Настройка Openbox
  Comment[zh_TW]=管理 Openbox 組態設定
 +Comment[pl]=Zarządca ustawień Openboksa
  Icon=obconf
  Exec=obconf %f
  Categories=Settings;DesktopSettings;GTK;
--MimeType=application/x-openbox-theme
-+MimeType=application/x-openbox-theme;
- StartupNotify=true
- Terminal=false
