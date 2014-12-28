@@ -11,7 +11,7 @@ Patch0:		%{name}-desktop.patch
 URL:		http://openbox.org/obconf/
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
-BuildRequires:	gettext-devel >= 0.15
+BuildRequires:	gettext-tools >= 0.15
 BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	libglade2-devel >= 1:2.6.2
 BuildRequires:	libtool
