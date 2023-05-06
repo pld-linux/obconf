@@ -5,12 +5,14 @@ Version:	2.0.4
 Release:	2
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://icculus.org/openbox/obconf/%{name}-%{version}.tar.gz
+#Source0Download: http://openbox.org/wiki/Openbox:Download#ObConf_-_Openbox_configuration_tool
+Source0:	http://openbox.org/dist/obconf/%{name}-%{version}.tar.gz
 # Source0-md5:	9271c5d2dc366d61f73665a5e8bceabc
 Patch0:		%{name}-desktop.patch
-URL:		http://openbox.org/obconf/
+URL:		http://openbox.org/wiki/ObConf:About
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
+BuildRequires:	gdk-pixbuf2-devel >= 2.0
 BuildRequires:	gettext-tools >= 0.15
 BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	libglade2-devel >= 1:2.6.2
@@ -50,8 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# no -> nb
-%{__mv} $RPM_BUILD_ROOT%{_datadir}/locale/{no,nb}
+# update name
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/{no,nb}
 
 %find_lang %{name}
 
@@ -70,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS README
+%doc AUTHORS CHANGELOG README
 %attr(755,root,root) %{_bindir}/obconf
 %{_datadir}/%{name}
 %{_desktopdir}/obconf.desktop
