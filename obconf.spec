@@ -2,7 +2,7 @@ Summary:	Tool for configuring the Openbox window manager
 Summary(pl.UTF-8):	Narzędzie do konfiguracji zarządcy okien Openbox
 Name:		obconf
 Version:	2.0.4
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		X11/Applications
 #Source0Download: http://openbox.org/wiki/Openbox:Download#ObConf_-_Openbox_configuration_tool
@@ -39,6 +39,7 @@ zachowania okien.
 %patch -P0 -p1
 
 %build
+export CFLAGS="%{optflags} -Wno-implicit-function-declaration"
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
